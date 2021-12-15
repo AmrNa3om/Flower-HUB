@@ -483,7 +483,7 @@ header .container .header-content .tools div:last-child::before{
 }
 
 .home .container .home-content .giftTypes > div{
-    flex-basis: 300px;
+    flex-basis: 350px;
 }
 
 .home .container .home-content .giftTypes .item .photo{
@@ -500,7 +500,11 @@ header .container .header-content .tools div:last-child::before{
 }
 
 .home .container .home-content .giftTypes .item .photo img{
-    max-width: 250px;
+    width: 130px;
+}
+
+.home .container .home-content .giftTypes .item:last-of-type .photo img{
+    width: 200px;
 }
 
 .home .container .home-content .giftTypes .item:first-of-type .photo{
