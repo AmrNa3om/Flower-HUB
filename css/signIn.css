@@ -39,8 +39,8 @@ body{
 
 .signIn{
     background-color: white;
-    width: calc(70%);
-    height: calc(100vh - 120px);
+    max-height: 600px;
+    min-height: 550px;
     margin: 60px auto;
     display: flex;
     justify-content: center;
