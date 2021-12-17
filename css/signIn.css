@@ -1,0 +1,291 @@
+/* Start Global Variables */
+:root{
+    --mainColor: #0B4F6C;
+    --textColor: #3D3E41;
+    --headingColor: #537F4D;
+    --greenColor: #9DCC7C;
+    --montserratFont: 'Montserrat', sans-serif;
+    --stalemateFont: 'Stalemate', cursive;
+}
+/* End Global Variables */
+
+/* Start Global Rules */
+*{
+    box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+body{
+    font-family: var(--montserratFont);
+}
+
+::selection{
+    color: white;
+    background-color: var(--mainColor);
+}
+/* End Global Rules */
+
+body{
+    height: calc(100vh);
+    background-image: linear-gradient(90deg, #BBD2C5 0%, #536976 100%);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn{
+    background-color: white;
+    width: calc(70%);
+    height: calc(100vh - 120px);
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.signIn > div{
+    flex-basis: 50%;
+}
+
+.signIn .slider{
+    overflow: hidden;
+}
+
+.signIn .slider img{
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 991px){
+    .slider{
+        display: none;
+    }
+    .signIn{
+        width: calc(50%);
+        height: calc(100vh - 120px);
+    }
+    .signIn > div{
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 767px){
+    .signIn{
+        width: calc(65%);
+    }
+}
+
+@media (max-width: 451px){
+    .signIn{
+        width: calc(90%);
+    }
+}
+
+/* Sign In Content */
+.signIn .signIn-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.signIn .signIn-content .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding: 20px 0 40px;
+}
+
+.signIn .signIn-content .header .icon{
+    margin: 0 10px 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.signIn .signIn-content .header .icon a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.signIn .signIn-content .header .icon .fa-home{
+    color: #0B4F6C;
+}
+
+.signIn .signIn-content .header .buttons{
+    margin: 0 20px 0 10px;
+    font-size: 15px;
+}
+
+.signIn .signIn-content .header .buttons button{
+    color: var(--mainColor);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.signIn .signIn-content .header .buttons button:last-of-type{
+    color: var(--textColor);
+}
+
+.signIn .signIn-content .logo{
+    font-family: var(--stalemateFont);
+    font-size: 40px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.signIn .signIn-content .logo span{
+    color: var(--mainColor);
+}
+
+.signIn .signIn-content .logo::after{
+    position: absolute;
+    content: '';
+    background-image: url("../imgs/flower.svg");
+    height: 65px;
+    width: 30px;
+    right: -28%;
+    top: -15px;
+    background-size: 30px 65px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signIn .signIn-content .heading{
+    background-image: url("../imgs/headingBG.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 40px 15px 10px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.signIn .signIn-content .signIn-form{
+    font-size: 15px;
+    width: 65%;
+    height: 100%;
+    position: relative;
+}
+
+.signIn .signIn-content .signIn-form form .block{
+    display: block;
+}
+
+.signIn .signIn-content .signIn-form form label{
+    font-size: 13px;
+    color: #958D8D;
+    margin: 20px 0 0;
+}
+
+.signIn .signIn-content .signIn-form form input{
+    width: 100%;
+    border-width: 0 0 1px 0;
+    border-color: var(--textColor);
+    border-style: solid;
+    padding: 5px 2px;
+}
+
+.signIn .signIn-content .signIn-form form input:focus{
+    outline: 0;
+}
+
+.signIn .signIn-content .signIn-form form .forget-password{
+    background-color: transparent;
+    border: 0;
+    color: #958D8D;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    padding: 10px 0 0;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 137px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 20px;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .sign-in{
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    width: 120px;
+    text-transform: capitalize;
+    padding: 5px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .google-signIn{
+    background-color: transparent;
+    border-width: 0 0 2px;
+    border-color: #958D8D;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .google-signIn img{
+    vertical-align: middle;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .google-signIn span{
+    padding: 0 10px;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .line{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--mainColor);
+    width: 100%;
+    text-align: center;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .line::after{
+    position: absolute;
+    content: "";
+    width: 37%;
+    height: 1px;
+    background-color: #958D8D;
+    top: 50%;
+    left: 0;
+}
+
+.signIn .signIn-content .signIn-form form .signin-buttons .line::before{
+    position: absolute;
+    content: "";
+    width: 37%;
+    height: 1px;
+    background-color: #958D8D;
+    top: 50%;
+    right: 0;
+}
+
+
+@media (max-width: 451px){
+    .signIn .signIn-content .signIn-form form .signin-buttons .google-signIn{
+        font-size: 10px;
+        padding: 5px 0;
+    }
+}
+/* Sign In Content */
